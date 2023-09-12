@@ -5,7 +5,7 @@ import 'package:patterns_bloc/bloc/list_post_cubit.dart';
 import 'package:patterns_bloc/pages/create_page.dart';
 import 'package:patterns_bloc/views/view_of_home.dart';
 
-import '../models/post_model.dart';
+import '../model/post_model.dart';
 import '../services/http_service.dart';
 import '../views/item_of_post.dart';
 import '../views/view_of_error.dart';

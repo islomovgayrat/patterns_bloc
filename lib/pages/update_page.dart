@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patterns_bloc/bloc/update_post_cubit.dart';
-import 'package:patterns_bloc/models/post_model.dart';
+import 'package:patterns_bloc/model/post_model.dart';
 
 import '../views/view_of_update.dart';
 
@@ -19,7 +19,7 @@ class _UpdatePageState extends State<UpdatePage> {
   var bodyController = TextEditingController();
 
   finish(BuildContext context) {
-    SchedulerBinding.instance?.addPostFrameCallback((_) {
+    SchedulerBinding.instance.addPostFrameCallback((_) {
       Navigator.of(context).pop('result');
     });
   }

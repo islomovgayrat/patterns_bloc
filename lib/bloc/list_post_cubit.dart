@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:patterns_bloc/services/http_service.dart';
 
-import '../models/post_model.dart';
+import '../model/post_model.dart';
 import '../pages/create_page.dart';
 
 part 'list_post_state.dart';

@@ -5,7 +5,7 @@ import 'package:patterns_bloc/pages/update_page.dart';
 
 import '../bloc/list_post_cubit.dart';
 import '../bloc/update_post_cubit.dart';
-import '../models/post_model.dart';
+import '../model/post_model.dart';
 
 Widget itemOfPost(BuildContext context, Post post) {
   return Slidable(
@@ -52,8 +52,9 @@ Widget itemOfPost(BuildContext context, Post post) {
     ),
     child: Container(
       padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+      width: double.infinity,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(post.title!.toUpperCase()),
           const SizedBox(height: 5),

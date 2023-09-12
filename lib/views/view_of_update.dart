@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:patterns_bloc/models/post_model.dart';
+import 'package:patterns_bloc/model/post_model.dart';
 
 import '../bloc/update_post_cubit.dart';
 

@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:patterns_bloc/services/http_service.dart';
 
-import '../models/post_model.dart';
+import '../model/post_model.dart';
 
 part 'create_post_state.dart';
 

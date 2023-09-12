@@ -2,14 +2,19 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 
-import '../models/post_model.dart';
+import '../model/post_model.dart';
 import 'log_service.dart';
 
 class Network {
-  static String BASE = "jsonplaceholder.typicode.com";
+  static String BASE = "64fd70e3596493f7af7e3b46.mockapi.io";
   static Map<String, String> headers = {
-    'Content-Type': 'application/json;charset=UTF-8',
+    'Content-type': 'application/json; charset=UTF-8'
   };
+  //APIS
+  static String API_POST = '/users';
+  static String API_CREATE = '/users';
+  static String API_UPDATE = '/users/'; //ID
+  static String API_DELETE = '/users/'; //ID
 
   //REQUESTS
   static Future<String?> GET(String api, Map<String, dynamic> params) async {
@@ -60,12 +65,6 @@ class Network {
     return null;
   }
 
-  //APIS
-  static String API_POST = '/posts';
-  static String API_CREATE = '/posts';
-  static String API_UPDATE = '/posts/'; //ID
-  static String API_DELETE = '/posts/'; //ID
-
   //PARAMS
   static Map<String, String> paramsEmpty() {
     Map<String, String> params = {};
@@ -82,13 +81,13 @@ class Network {
     return params;
   }
 
-  static Map<String, String> paramsUpdate(Post post) {
-    Map<String, String> params = {};
+  static Map<String, dynamic> paramsUpdate(Post post) {
+    Map<String, dynamic> params = {};
     params.addAll({
       'id': post.id.toString(),
       'title': post.title.toString(),
       'body': post.body.toString(),
-      'userId': post.userId.toString(),
+      'userId': post.userId,
     });
     return params;
   }

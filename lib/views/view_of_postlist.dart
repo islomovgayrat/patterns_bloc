@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/post_model.dart';
+import '../model/post_model.dart';
 import 'item_of_post.dart';
 
 Widget viewOfPostList(List<Post> items) {
